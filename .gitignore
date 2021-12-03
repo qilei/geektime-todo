@@ -4,3 +4,6 @@
 out
 build
 .gradle
+
+### IntelliJ IDEA ###
+.idea
