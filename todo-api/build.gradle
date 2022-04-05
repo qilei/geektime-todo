@@ -9,6 +9,7 @@ buildscript {
 plugins {
     id 'org.springframework.boot' version "${springBootVersion}"
     id "org.flywaydb.flyway" version "${flywayVersion}"
+    id 'com.github.dreamhead.todo'
 }
 
 style {
@@ -77,7 +78,7 @@ task migrate {
 migrate.dependsOn migrateToDev, migrateToTest
 
 springBoot {
-    mainClassName = 'com.github.dreamhead.todo.api.Bootstrap'
+    mainClass = 'com.github.dreamhead.todo.api.Bootstrap'
 }
 
 bootJar {
